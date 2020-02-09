@@ -18,7 +18,6 @@ node {
         myTestContainer.inside {
           sh 'npm install --only=dev'
           sh 'npm test'
-          sh 'exit 1'
         }
       }
       stage('docker build/push') {            
