@@ -6,7 +6,7 @@ node {
           [$class: 'RequesterRecipientProvider']
   ])
 
-   try {
+  try {
       stage('Preparation') {
         checkout scm
         sh "git rev-parse --short HEAD > .git/commit-id"
@@ -43,5 +43,5 @@ node {
 
        // mark current build as a failure and throw the error
     throw e;
-    }                                     
+   }                                     
 }                                          
